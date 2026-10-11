@@ -1,3 +1,23 @@
+# Embedded — Outcome-based Delivery Roadmap
+
+> **Epics** group work by subsystem; **stories** represent individual changes; **milestones** are demonstrable integration results. The original M1–M12 story prefixes are permanent backlog identifiers, **not** native GitHub milestones. Milestones below intentionally span epics. No dates are committed.
+
+| Checkpoint | Demonstrable outcome | Required verification | Contributing epics |
+|---|---|---|---|
+| E1 | **Portable core executes on Pico 2 W** | Pinned desktop core compiles for RP2350, loads a licensed diagnostic ROM, executes headlessly, outputs serial test results. | #1 |
+| E2 | **First game on physical display** | SPI display presents frames, hardware buttons control a compatible game, initial audio output confirmed. | #1, #2 |
+| E3 | **Stable real-time FreeRTOS emulation** | One owner task advances virtual emulated time; display/input/audio tasks communicate safely; measured sustained frame rate and no major underruns. | #2, #3, #4 |
+| E4 | **Standalone handheld v1.0** | Documented hardware assembly, repeatable ROM loading, durable saves, power and memory budget, performance testing and release firmware. | #4, #5 |
+
+## Rules for milestone completion
+
+1. Attach test logs, captured frames or on-device evidence to a tracking issue or release notes.
+2. All critical acceptance tests must pass; any exceptions are explicitly documented.
+3. An epic's stories can contribute to several checkpoints and an epic can stay open after a milestone completes.
+4. This table is a **milestone specification** in documentation, not native GitHub Milestones; those require creation and issue assignment separately.
+
+## Existing backlog
+
 # Game Boy Emulator — Pico 2 W Roadmap
 
 Embedded Game Boy emulator firmware in **C**, with **Pico SDK** and **FreeRTOS**, reusing the portable core from [gameboy-emulator](https://github.com/YaaqoobC/gameboy-emulator).
